@@ -1,24 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react';
+import Navbar from './components/Navbar';
 
 function App() {
-
-    const [data, setData] = useState([{}])
-
-    useEffect(() => {
-      fetch("/members").then(
-        res => res.json()
-      ).then(
-          data => {
-              setData(data)
-              console.log(data)
-          }
-      )
-    }, [])
-    return (
-      <div>
-
-      </div>
-    )
+  return (
+    <div>
+      <Navbar />
+      <h2>Welcome to My Fantasy GM</h2>
+    </div>
+  );
 }
 
-export default App
+export default App;
